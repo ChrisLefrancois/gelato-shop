@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import MainContent from './components/MainContent';
+import translations from './components/Translation';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [language, setLanguage] = useState(null);
+
+  // Load saved language from localStorage on first render
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang) {
+      setLanguage(savedLang);
+    }
+  }, []);
+
+  // Save language to localStorage when selected
+  const handleLanguageSelect = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = language ? 'auto' : 'hidden';
+  }, [language]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app-container">
+      {!language && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h1>Choose Your Language</h1>
+            <div className="button-group">
+              <button onClick={() => handleLanguageSelect('en')}>English</button>
+              <button onClick={() => handleLanguageSelect('fr')}>Français</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+{language && (
+  <MainContent
+    t={translations[language]}
+    language={language}
+    onLanguageChange={(lang) => {
+      setLanguage(lang);
+      localStorage.setItem('language', lang);
+    }}
+  />
+)}
+    </div>
+  );
 }
 
-export default App
+export default App;

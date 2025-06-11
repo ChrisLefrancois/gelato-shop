@@ -1,0 +1,151 @@
+.contact-section {
+  padding: 3rem 1rem;
+  background-color: #fcf485;
+  text-align: center;
+  color: #333;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #55b3f3;
+}
+
+.contact-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.contact-left p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #333;
+}
+
+.contact-left a {
+  color: #55b3f3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-left a:hover {
+  text-decoration: underline;
+}
+
+.follow-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #55b3f3;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+}
+
+.social-icons a {
+  color: #55b3f3;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2a90e0;
+  transform: scale(1.2);
+}
+
+.icon {
+  color: #55b3f3;
+  font-size: 1.2rem;
+}
+
+.social-pill-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.pill-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid black;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.pill-button i {
+  font-size: 1.2rem;
+}
+
+/* === Facebook === */
+.pill-button.facebook {
+  background-color: #55b3f3;
+  color: white;
+  border-color: #55b3f3;
+}
+.pill-button.facebook:hover {
+  background-color: #4799d0;
+  transform: scale(1.05);
+}
+
+/* === Instagram === */
+.pill-button.instagram {
+  background-color: #fcf485;
+  color: black;
+  border-color: #fcf485;
+}
+.pill-button.instagram:hover {
+  background-color: #f6e768;
+  transform: scale(1.05);
+}
+
+/* === TikTok === */
+.pill-button.tiktok {
+  background-color: white;
+  color: #55b3f3;
+  border-color: #55b3f3;
+}
+.pill-button.tiktok:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
