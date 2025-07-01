@@ -51,7 +51,7 @@ const translations = {
     location: {
       title: "Emplacement & Heures",
       address: "1139A Mont-Royal Est, Montréal, QC H2j 1X9",
-      hours: "Lundi aux Dimanche - 12PM a 11PM"
+      hours: "Lundi au Dimanche - 12PM a 11PM"
     },
     contact: {
     contact: "Contactez-Nous",
