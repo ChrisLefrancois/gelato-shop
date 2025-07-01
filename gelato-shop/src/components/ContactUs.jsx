@@ -10,7 +10,7 @@ const ContactUs = ({t}) => {
       <div className="contact-card">
         <div className="contact-left">
           <p>{t.question}</p>
-          <p><FaPhoneAlt className="icon" /> <a href="tel:5144493548">514-419-0528</a></p>
+          <p><FaPhoneAlt className="icon" /> <a href="tel:5144190528">514-419-0528</a></p>
           <p><FaEnvelope className="icon" /> <a href="mailto:platogelato@outlook.com">platogelato@outlook.com</a></p>
         </div>
 
