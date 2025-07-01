@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh; /* Full height of the viewport */
-  background-image: url('/Users/christopherlefrancois/code/gelato-shop/gelato-shop/src/assets/gelato-bg.jpg'); /* Replace with your gelato image */
+  background-image: url('src/assets/gelato-bg.jpg'); /* Replace with your gelato image */
   background-size: cover;
   background-position: center;
 }
