@@ -5,6 +5,10 @@ import logo from '../assets/logo.jpg';
 const Navbar = ({ t, currentLanguage, onLanguageChange }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <a href="#" className="navbar-logo">
@@ -14,19 +18,19 @@ const Navbar = ({ t, currentLanguage, onLanguageChange }) => {
       <button
         className="menu-toggle"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label="Toggle menu"
       >
         ☰
       </button>
 
       <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#about">{t.about}</a>
-        <a href="#location">{t.location}</a>
-        <a href="#Contact">{t.contact}</a>
+        <a href="#about" onClick={handleLinkClick}>{t.about}</a>
+        <a href="#location" onClick={handleLinkClick}>{t.location}</a>
+        <a href="#contact" onClick={handleLinkClick}>{t.contact}</a>
         <div className="language-switcher">
-          <button
-            onClick={() => onLanguageChange(currentLanguage === 'en' ? 'fr' : 'en')}
-          >
+          <button onClick={() => {
+            onLanguageChange(currentLanguage === 'en' ? 'fr' : 'en');
+            handleLinkClick();
+          }}>
             {currentLanguage === 'en' ? 'Français' : 'English'}
           </button>
         </div>
