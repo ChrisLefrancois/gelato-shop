@@ -22,7 +22,7 @@ const translations = {
       title: "Find Us",
       address: "1139A Mont-Royal East, Montreal, QC H2J 1X9",
       hourtitle: "Opening Hours",
-      hours: "Monday to Sunday 12PM to 11PM",
+      hours: "Monday to Sunday 1PM to 11PM",
     },
     contact: {
       contact: "Contact Us",
@@ -51,7 +51,7 @@ const translations = {
     location: {
       title: "Emplacement & Heures",
       address: "1139A Mont-Royal Est, Montréal, QC H2j 1X9",
-      hours: "Lundi au Dimanche - 12PM a 11PM"
+      hours: "Lundi au Dimanche - 1PM a 11PM"
     },
     contact: {
     contact: "Contactez-Nous",
